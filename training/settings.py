@@ -25,6 +25,18 @@ SECRET_KEY = 'django-insecure-&83p8+4rt00+0wym6mqct9n5@15(b*$ha0i8r4!#+_qaqif8jv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGGING = {
+    # ...
+    "handlers": {
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": "/opt/support/django.log",
+        },
+    },
+}
+
+
+
 ALLOWED_HOSTS = []
 
 
