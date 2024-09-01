@@ -37,7 +37,7 @@ LOGGING = {
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ec2-13-246-186-28.af-south-1.compute.amazonaws.com:8899"]
 
 
 # Application definition
