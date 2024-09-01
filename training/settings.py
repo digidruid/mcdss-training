@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-&83p8+4rt00+0wym6mqct9n5@15(b*$ha0i8r4!#+_qaqif8jv
 DEBUG = True
 
 LOGGING = {
-    # ...
+    "version": 1,
     "handlers": {
         "file": {
             "class": "logging.FileHandler",
