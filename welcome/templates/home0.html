@@ -2,7 +2,12 @@
 {% block content %}
 <h1> Welcome to the Web Development Training  </h1>
 
-
-
+<ul>
+{% for agenda in agendas %}
+   <li>
+      {{ agenda }}
+   </li>
+{% endfor %}
+</ul>
 
 {% endblock %} 
