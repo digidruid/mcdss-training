@@ -1,8 +1,7 @@
 #!/bin/bash
 
-cd ~/mocdss/demo1
-source bin/activate
+cd ~/mocdss/mcdss-training
+source venv/bin/activate
 
-cd ~/mocdss/demo1/mcdss-training
-python manage.py runserver 0.0.0.0:8899 >> /opt/support/django-$(date -I).log 2>&1 &
+python manage.py runserver 0.0.0.0:8899 >> /opt/support/$(date -I)-django-web.log 2>&1 &
 
