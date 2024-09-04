@@ -2,12 +2,13 @@
 {% block content %}
 <h1> Welcome to the Web Development Training  </h1>
 
-<ul>
+<div class="row">
 {% for agenda in agendas %}
-   <li>
-      {{ agenda }}
-   </li>
+   <div id="day{{agenda.dayId}}" class="col-lg-6 col-sm-12 dayx">
+      <h2>Day {{agenda.dayId}} :  {{agenda.agendaTitle}}</h2>
+      <button onclick="hideday('#day{{agenda.dayId}}')">Done</button>
+   </div>
 {% endfor %}
-</ul>
+</div>
 
 {% endblock %} 

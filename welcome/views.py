@@ -5,13 +5,18 @@ import requests
 # Create your views here.
 def home(req):
     
+    apidata = requests.get("http://127.0.0.1:8890/api/agendas/").json()
 
+    apidata1 = []
+    for agenda in apidata:
+        if agenda['completed'] != True:
+            apidata1.append(agenda)
 
-    #apidata = [] #requests.get("http://127.0.0.1:8890/api/agendas").json()
+    #filter(lambda x: x['Completed']!=True, apidata)
 
-    #return HttpResponse(apidata)
+#    return HttpResponse(apidata)
 
-    #return render(req, "home.html", {'agendas': apidata } )
+    return render(req, "home0.html", {'agendas': apidata1 } )
 
 
 

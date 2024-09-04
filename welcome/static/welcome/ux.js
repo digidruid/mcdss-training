@@ -1,7 +1,8 @@
 // usage example: <button onclick="hideday('day1')">Done</button>
 
 function hideday(id) {
-    $(id).fadeToggle();
+    console.log("I am here!!!")
+    $(id).hide();
 }
 
 function showdays() {
