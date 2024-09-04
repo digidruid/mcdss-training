@@ -5,18 +5,5 @@ function hideday(id) {
 }
 
 function showdays() {
-    $("#day1").fadeToggle();
-    $("#day2").fadeToggle();
-    //$(id).fadeToggle()
+    $(".dayx").show();
 }
-
-
-
-function hideday1() {
-    $("#day1").fadeToggle();
-}
-
-function hideday2() {
-    $("#day2").fadeToggle();
-}
-
