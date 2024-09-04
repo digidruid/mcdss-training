@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ai4mvc(dtmo2sqb$4ld0tw^=#%wpb$7ry_9a=fgl&lx#rw#k%1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-13-246-186-28.af-south-1.compute.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-13-246-186-28.af-south-1.compute.amazonaws.com','127.0.0.1']
 
 
 # Application definition
