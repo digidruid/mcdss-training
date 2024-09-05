@@ -1,5 +1,19 @@
 .navbar {
     background-color: rgb(40, 73, 165);
-    color: grey
+    color: grey;
 }
 
+.dayx {
+    background-color: lightgray;
+    margin: 2% 3%;
+}
+
+.slidex {
+    background-color: lightgray;
+    margin: 5% 5%;
+}
+
+.footer {
+
+    background-color: rgb(40, 73, 165);
+}
