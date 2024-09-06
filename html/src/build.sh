@@ -4,7 +4,7 @@
 git pull
 
 
-./quick_build.sh
+./quick-build.sh
 
 cd ../..
 
