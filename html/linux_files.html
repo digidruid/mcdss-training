@@ -1,0 +1,194 @@
+<html>
+   <head>
+      <title>YanniTech Training</title>
+      <link rel="stylesheet" type="text/css" href="style.css"> 
+      <script src = "jquery.js" type="text/javascript"></script>
+      <script src = "ux.js" type="text/javascript"></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   </head>
+      <body>
+         <div class="container">
+            <nav class="col-12 navbar navbar-expand-lg">
+               <div class="container-fluid">
+                 <a class="navbar-brand" href="#">Web Application Training</a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="#">Home</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Day 1
+                       </a>
+                       <ul class="dropdown-menu">
+                         <li><a class="dropdown-item" href="#">Action</a></li>
+                         <li><a class="dropdown-item" href="#">Another action</a></li>
+                         <li><hr class="dropdown-divider"></li>
+                         <li><a class="dropdown-item" href="#">Something else here</a></li>
+                       </ul>
+                     </li>
+                     
+                   </ul>
+                 </div>
+               </div>
+             </nav>
+
+
+             
+
+
+      <div class="row">
+    <h1 class="slideh1">Users and the Filesystem</h1>
+    
+    <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">Filesystem Layout</button>
+    <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info" >The root folder</button>
+    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info" >Important folders</button>
+    <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info" >Commands</button>
+    <button onclick="showslide('#slide5')" class="slidebtn col-2 btn btn-info" >Permissions</button>
+    
+
+</div>
+
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+
+
+<div class="row">
+<div class="col-12">
+    <div id="slide1" class="col-12 slidex ">
+        <h2>Filesystem Layout</h2>
+        
+        <div class="row">
+            <div class="col-12"><hr/></div>
+        </div>
+
+        <ul>
+            <li>One structure regardless of physical disks</li>
+            <li>Root folder / </li>
+            <li>Device and Network Shares mounted into the folder structure</li>
+        </ul>        
+    </div>
+</div>
+</div>
+    
+<div class="row">
+<div class="col-12">
+<div id="slide2" class="col-12 slidex ">
+    <h2>The root folder </h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    <img src="images/root_folder.png"/>
+
+    <br>
+    <h3>What do we see?</h3>
+    <ul>
+    <li>File Types</li>
+    <ul>
+            <li>-: 'Normal' File</li>
+            <li>d: Directory</li>
+            <li>l: Link</li>
+        </ul>
+    <li>Permissions for User, Group and Other</li>
+    <ul>
+        <li>r: read</li>
+        <li>w: write</li>
+        <li>x: execute</li>
+    </ul>
+    
+    <li>User / Group Ownership</li>
+    <li>Size</li>
+    <li>Last Change Time</li>
+    <li>Filename</li>
+    <ul><li>Files starting with '.' are "hidden" and usual has a special purpose</li></ul>
+    </ul>
+    
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide3" class="col-12 slidex ">
+    <h2>Important Folders</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+    <ul>
+        <li>/bin - most of the scripts and binary files in the system</li>
+        <li>/home - all user files</li>
+        <li>/dev - devices</li>
+        <li>/etc - configurations</li>
+        <li>/lib - libraries</li>
+        <li>/proc - system runtime details</li>
+        <li>/var - variable data (Logs)</li>
+    </ul>
+    
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide4" class="col-12 slidex ">
+    <h2>Commands</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+    <ul>
+        <li><kbd>ls</kbd>: Listing </li>
+        <li><kbd>cd</kbd>: Change directory </li>
+        <li><kbd>pwd</kbd>: Print working directory</li>
+        <li><kbd>mkdir</kbd>: Make directory </li>
+        <li><kbd>rmdir</kbd>: Remove directory </li>
+        <li><kbd>man</kbd>: Man pages </li>
+    </ul>
+    
+</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+    <div id="slide5" class="col-12 slidex ">
+        <h2>Permissions</h2>
+        
+        <div class="row">
+            <div class="col-12"><hr/></div>
+        </div>
+        <ul>
+            <li><kbd>chmod</kbd>: Change permissions </li>
+            <li><kbd>chown</kbd>: Change owner </li>
+            <li><kbd>chgrp</kbd>: Change group</li>
+            <li><kbd>groups</kbd>: List groups </li>
+            <li><kbd>sudo</kbd>: Remove directory </li>
+        </ul>
+        
+    </div>
+    </div>
+    </div>
+
+
+   </div>
+      <div class="col-12 footer">
+         <img src="assets/mocdss_logo.png"/>
+      </div>
+   </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+     
+   </body>
+</html>
+
