@@ -9,7 +9,7 @@ function showdays() {
 }
 
 function showslide(id) {
-    $(".slidex").fade()
+    $(".slidex").hide()
     $(id).show()
 }
 
