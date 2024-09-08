@@ -1,11 +1,9 @@
 <div class="row">
-    <h1 class="slideh1">Users and the Filesystem</h1>
+    <h1 class="slideh1">Basic File and Text Manipulation</h1>
     
-    <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">Filesystem Layout</button>
-    <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info" >The root folder</button>
-    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info" >Important folders</button>
-    <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info" >Commands</button>
-    <button onclick="showslide('#slide5')" class="slidebtn col-2 btn btn-info" >Permissions</button>
+    <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">Editors</button>
+    <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info" >Basic commands</button>
+    
     
 
 </div>
@@ -19,17 +17,18 @@
 <div class="row">
 <div class="col-12">
     <div id="slide1" class="col-12 slidex ">
-        <h2>Filesystem Layout</h2>
+        <h2>Editors</h2>
         
         <div class="row">
             <div class="col-12"><hr/></div>
         </div>
 
         <ul>
-            <li>One structure regardless of physical disks</li>
-            <li>Root folder / </li>
-            <li>Device and Network Shares mounted into the folder structure</li>
+            <li><kbd>nano</kbd>: Basic editor available in most distributions</li>
+            <li><kbd>vim</kbd>: 'Expert Friendly' editor with a lot of extendability</li>
         </ul>        
+
+        For <kdb>vim</kbd> just remembet <kbd>Esc</kbd>, <kbd>:wq</kbd>, <kbd>Enter</kbd>  
     </div>
 </div>
 </div>
@@ -37,36 +36,20 @@
 <div class="row">
 <div class="col-12">
 <div id="slide2" class="col-12 slidex ">
-    <h2>The root folder </h2>
+    <h2>Basic Commands</h2>
     
     <div class="row">
         <div class="col-12"><hr/></div>
     </div>
 
-    <img src="images/root_folder.png"/>
 
-    <br>
-    <h3>What do we see?</h3>
     <ul>
-    <li>File Types</li>
-    <ul>
-            <li>-: 'Normal' File</li>
-            <li>d: Directory</li>
-            <li>l: Link</li>
-        </ul>
-    <li>Permissions for User, Group and Other</li>
-    <ul>
-        <li>r: read</li>
-        <li>w: write</li>
-        <li>x: execute</li>
+    <li>Copying, moving, deleting files: <kbd>cp</kbd>, <kbd>mv</kbd>, <kbd>rm</kbd></li>
+    <li>Viewing and editing files: <kbd>cat</kbd>, <kbd>less</kbd>, <kbd>more</kbd>, <kbd>grep</kbd></li>
+    <li>Comparing files: <kbd>diff</kbd></li>
+    <li>Symbolic and hard links: <kbd>ln</kbd></li>
     </ul>
-    
-    <li>User / Group Ownership</li>
-    <li>Size</li>
-    <li>Last Change Time</li>
-    <li>Filename</li>
-    <ul><li>Files starting with '.' are "hidden" and usual has a special purpose</li></ul>
-    </ul>
+
     
 </div>
 </div>
