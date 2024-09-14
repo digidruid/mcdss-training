@@ -1,0 +1,181 @@
+<div class="row">
+    <h1 class="slideh1">HTML Styling</h1>
+    
+    <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">No Style</button>
+    <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info" >Inspect Elements</button>
+    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info" >Inspect Network</button>
+    <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info" >Inspect Console</button>
+    <button onclick="showslide('#slide5')" class="slidebtn col-2 btn btn-info" >CI/CD and Version Control</button>
+    <button onclick="showslide('#slide6')" class="slidebtn col-2 btn btn-info" >Log Files</button>
+    
+</div>
+
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+<div class="row">
+<div class="col-12">
+    <div id="slide1" class="col-12 slidex ">
+        <h2>No Style</h2>
+        
+        <div class="row">
+            <div class="col-12"><hr/></div>
+        </div>
+
+        The following is an example of a web page with no styling (or at least default browser styling)
+        
+        <div class="row align-items-center">
+            <div class="col-5">
+                <h5>Code</h5>
+                <img src="images/web-chrome-inspect-menu.png" class="img-fluid"/>    
+            </div>
+        </div>
+
+        From the browser menu
+        <div></div>
+
+        From in page Right Click
+        <div><img src="images/web-chrome-inspect-rclick.png" class="img-fluid"/></div>
+    </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div id="slide2" class="col-12 slidex ">
+            <h2>Inspect Elements</h2>
+            
+            <div class="row">
+                <div class="col-12"><hr/></div>
+            </div>
+                
+        <h3>Elements</h3>
+        Debug the generated html code and styling. In this example the style.css has the following.
+        <pre class="code">
+.code {
+    background-color: black;
+    color: lightgray;
+    padding: 10px, 10px;
+}</pre> 
+        The expexted result would have been.
+        <div>
+        Most browsers have an <code style="background-color: black; color: lightgray;">Inspect</code> or <code>Developer Tools</code> mode.
+        </div>
+
+        Looking at the element we see the font colour resolving to red.
+        <div><img src="images/web-inspect-elements.png" class="img-fluid"/></div> 
+
+        Drilling down on the Styles view on the right, we can see that we are not picking up the style from style.css.
+        <div><img src="images/web-code-style.png" class="img-fluid"/></div>
+        
+        This if because the &lt;code&gt;Inspect&lt;/code&gt; style is not defined for the element, but for the class ie. '.code'. We have 2 options to fix this. 
+        <ol>
+            <li>Add a 'code' style in style.css</li>
+            <li>Add class="code" in the html </li>
+        </ol>
+
+        I opted for the second options as the will give more control on inline styling.<br>
+        We will have a much deeper dive into styling in the UI/UX session tomorrow. 
+        
+    </div>
+</div>
+</div>
+ 
+
+<div class="row">
+    <div class="col-12">
+        <div id="slide3" class="col-12 slidex ">
+            <h2>Inspect Network</h2>
+            
+            <div class="row">
+                <div class="col-12"><hr/></div>
+            </div>
+    
+            The network tab helps to debug links that are slow or broken. In the example below we see a 404 on <code>images/web-inspect-elements</code>. 
+            The reason is that we missed the '.png' in the filename. 
+
+            <div><img src="images/web-inspect-elements-error.png" class="img-fluid"/></div>
+    
+        </div>
+    </div>
+</div>
+    
+
+<div class="row">
+<div class="col-12">
+<div id="slide3" class="col-12 slidex ">
+    <h2>Inspect Network</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    The network tab helps to debug links that are slow or broken. In the example below we see a 404 on <code>images/web-inspect-elements</code>. 
+    The reason is that we missed the '.png' in the filename. 
+
+    <div><img src="images/web-inspect-elements-error.png" class="img-fluid"/></div>
+
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide4" class="col-12 slidex ">
+    <h2>Inspect Console</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    The Console tab helps to debug css importing and javascript issues. 
+
+    <div><img src="images/web-console.png" class="img-fluid"/></div>
+
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide5" class="col-12 slidex ">
+    <h2>CI/CD and Version Control</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    Having a CI/CD work method in place linked to the Version Control of your software can 
+    make troubleshooting even easier. Most recent changes deployed are traceable and can be 
+    investigated for regressions. Below we see that the file name for the logo got altered by accident.  
+
+
+    <div><img src="images/web-git.png" class="img-fluid"/></div>
+
+
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-12">
+<div id="slide6" class="col-12 slidex ">
+    <h2>Log Files</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    Depending on the way the page content is rendered and hosted, you will need to look at log files on the server. 
+    In most cases the most common log file will be the nginx access and error logs. Below is an example of an access_log.  
+
+    <div><img src="images/web-nginx-log.png" class="img-fluid"/></div>
+
+    We will cover analysizing log files in the Linux Server section of the course.
+
+
+</div>
+</div>
+</div>
