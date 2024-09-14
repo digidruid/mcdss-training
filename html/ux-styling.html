@@ -46,7 +46,7 @@
     
     <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">No Style</button>
     <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info">Style Attribute</button>
-    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info" >Inspect Network</button>
+    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info">Style Cascading</button>
     <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info" >Inspect Console</button>
     <button onclick="showslide('#slide5')" class="slidebtn col-2 btn btn-info" >CI/CD and Version Control</button>
     <button onclick="showslide('#slide6')" class="slidebtn col-2 btn btn-info" >Log Files</button>
@@ -59,93 +59,103 @@
 
 <div class="row">
 <div class="col-12">
-    <div id="slide1" class="col-12 slidex ">
-        <h2>No Style</h2>
-        
-        <div class="row">
-            <div class="col-12"><hr/></div>
-        </div>
+<div id="slide1" class="col-12 slidex ">
+<h2>No Style</h2>
 
-        The following is an example of a web page with no styling (or at least default browser styling)
-        <br>
-        
-        <div class="row">
-            <div class="col-12">
-                <table>
-                    <tr>
-                        <td><h5>Code</h5>
-                        <img src="images/ux-no-style-code.png" class="rounded"/></td>
-                        <td>
-                            <h5>Page</h5>
-                            <img src="images/ux-no-style-page.png" class="rounded"/>    
-                        </td>
-                    </tr>
-                </table>     
-            </div>
-        </div>
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+The following is an example of a web page with no styling (or at least default browser styling)
+<br>
+
+<div class="row">
+    <div class="col-12">
+        <table>
+            <tr>
+            <td><h5>Code</h5>
+                <img src="images/ux-no-style-code.png" class="rounded img-fluid"/></td>
+            <td>
+                <h5>Page</h5>
+                <img src="images/ux-no-style-page.png" class="rounded img-fluid"/>    
+            </td>
+            </tr>
+        </table>     
     </div>
+</div>
 </div>
 </div>
 
 <div class="row">
+<div class="col-12">
+<div id="slide2" class="col-12 slidex">
+<h2>Basic Styling</h2>
+
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+HTML Elements can be styled using the <code>style</code> attribute. The following example has some font and colour stylings applied. 
+<br>
+
+<div class="row">
     <div class="col-12">
-        <div id="slide2" class="col-12 slidex ">
-            <h2>Basic Styling</h2>
-            
-            <div class="row">
-                <div class="col-12"><hr/></div>
-            </div>
-    
-            HTML Elements can be styled using the <code>style</code> attribute. The following example has some font stylings applied. 
-            <br>
-            
-            <div class="row">
-                <div class="col-12">
-                    <table>
-                        <tr>
-                            <td><h5>Code</h5>
-                            <img src="images/ux-no-style-code.png" class="rounded"/></td>
-                            <td>
-                                <h5>Page</h5>
-                                <img src="images/ux-no-style-page.png" class="rounded"/>    
-                            </td>
-                        </tr>
-                    </table>     
-                </div>
-            </div>
-        </div>
+        <table>
+            <tr>
+                <td><h5>Code</h5>
+                <img src="images/ux-basic-style-code.png" class="rounded img-fluid" /></td>
+                <td>
+                    <h5>Page</h5>
+                    <img src="images/ux-basic-style-page.png" class="rounded  img-fluid"/>    
+                </td>
+            </tr>
+        </table>     
     </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide3" class="col-12 slidex ">
+    <h2>Style Cascading</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
     </div>
 
+    <p>
+    Styles are applied in a cascading / inheritted way between elements. As you can see all the fonts of all the elements have update to Arial. 
+    This is due to the <code>style="font-family: Arial"</code> on the <code>&lt;body&gt;</code> element 
+    </p>
+    <br>
+    <p>
+        If your web application has a lot of styling it can become very tedious and error prone to update individual elements. Luckiy styles can be 
+        grouped into classes and also be applied based on element type. For the previous example, we missed styling the <b>Day 1: Web Applications</b> header. 
+        We are going to fix this now with a generic style on the &lt;h2&gt; element.  
+    </p>
+    <p>
+       We are also going to make a class for completed items. If we decide to change the style, we can do it in one place.
+    </p>
+
+    
     <div class="row">
         <div class="col-12">
-            <div id="slide1" class="col-12 slidex ">
-                <h2>No Style</h2>
-                
-                <div class="row">
-                    <div class="col-12"><hr/></div>
-                </div>
-        
-                The following is an example of a web page with no styling (or at least default browser styling)
-                <br>
-                
-                <div class="row">
-                    <div class="col-12">
-                        <table>
-                            <tr>
-                                <td><h5>Code</h5>
-                                <img src="images/ux-no-style-code.png" class="rounded"/></td>
-                                <td>
-                                    <h5>Page</h5>
-                                    <img src="images/ux-no-style-page.png" class="rounded"/>    
-                                </td>
-                            </tr>
-                        </table>     
-                    </div>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <td><h5>Code</h5>
+                    <img src="images/ux-head-style-code.png" class="rounded"/></td>
+                    <td>
+                        <h5>Page</h5>
+                        <img src="images/ux-head-style-page.png" class="rounded"/>    
+                    </td>
+                </tr>
+            </table>     
         </div>
-        </div>
+    </div>
+</div>
+</div>
+</div>
 
 
    </div class="row">

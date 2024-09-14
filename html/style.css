@@ -12,6 +12,7 @@
 
     background-color: rgb(211, 219, 221);
     padding: 5% 5%;
+    margin-bottom: 2em;
 }
 
 .footer {
@@ -29,12 +30,20 @@
     margin-top: 1em;
 }
 
+.done {
+    background-color: lightgray !important;
+    font-style: italic;
+    color: darkolivegreen;
+}
+
 code {
     background-color: black !important;
     color: lightgray !important;
     padding: 0.3em !important;
     
 }
+
+
 
 
 h1 {
