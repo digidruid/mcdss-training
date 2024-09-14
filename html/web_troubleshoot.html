@@ -1,0 +1,206 @@
+<html>
+   <head>
+      <title>YanniTech Training</title>
+      <link rel="stylesheet" type="text/css" href="style.css"> 
+      <script src = "jquery.js" type="text/javascript"></script>
+      <script src = "ux.js" type="text/javascript"></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   </head>
+      <body>
+         <div class="container">
+            <nav class="col-12 navbar navbar-expand-lg">
+               <div class="container-fluid">
+                 <a class="navbar-brand" href="/html/index.html">MCDSS Training</a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="/html/index.html">Home</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Day 6
+                       </a>
+                       <ul class="dropdown-menu">
+                         <li><a class="dropdown-item" href="/html/linux_intro.html">Introduction to Linux</a></li>
+                         <li><a class="dropdown-item" href="/html/linux_files.html">Users and Filesystem</a></li>
+                         <li><a class="dropdown-item" href="/html/linux_file_edit.html">Basic File and Text Manipulation</a></li>
+                       </ul>
+                     </li>
+                     
+                   </ul>
+                 </div>
+               </div>
+             </nav>
+
+
+             
+
+
+      <div class="row">
+    <h1 class="slideh1">Web Application Troubleshooting</h1>
+    
+    <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">Browser Inspect</button>
+    <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info" >Inspect Elements</button>
+    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info" >Inspect Network</button>
+    <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info" >Inspect Console</button>
+    <button onclick="showslide('#slide5')" class="slidebtn col-2 btn btn-info" >Log Files</button>
+    
+</div>
+
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+
+
+<div class="row">
+<div class="col-12">
+    <div id="slide1" class="col-12 slidex ">
+        <h2>Browser Inspect</h2>
+        
+        <div class="row">
+            <div class="col-12"><hr/></div>
+        </div>
+
+        Most browsers have an <code>Inspect</code> or <code>Developer Tools</code> mode.
+
+        <h3>Chrome</h3>
+
+        From the browser menu
+        <div><img src="images/web-chrome-inspect-menu.png" class="img-fluid"/></div>
+
+        From in page Right Click
+        <div><img src="images/web-chrome-inspect-rclick.png" class="img-fluid"/></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div id="slide2" class="col-12 slidex ">
+            <h2>Inspect Elements</h2>
+            
+            <div class="row">
+                <div class="col-12"><hr/></div>
+            </div>
+                
+        <h3>Elements</h3>
+        Debug the generated html code and styling. In this example the style.css has the following.
+        <pre class="code">
+.code {
+    background-color: black;
+    color: lightgray;
+    padding: 10px, 10px;
+}</pre> 
+        The expexted result would have been.
+        <div>
+        Most browsers have an <code style="background-color: black; color: lightgray;">Inspect</code> or <code>Developer Tools</code> mode.
+        </div>
+
+        Looking at the element we see the font colour resolving to red.
+        <div><img src="images/web-inspect-elements.png" class="img-fluid"/></div> 
+
+        Drilling down on the Styles view on the right, we can see that we are not picking up the style from style.css.
+        <div><img src="images/web-code-style.png" class="img-fluid"/></div>
+        
+        This if because the &lt;code&gt;Inspect&lt;/code&gt; style is not defined for the element, but for the class ie. '.code'. We have 2 options to fix this. 
+        <ol>
+            <li>Add a 'code' style in style.css</li>
+            <li>Add class="code" in the html </li>
+        </ol>
+
+        I opted for the second options as the will give more control on inline styling.<br>
+        We will have a much deeper dive into styling in the UI/UX session tomorrow. 
+        
+    </div>
+</div>
+</div>
+ 
+
+<div class="row">
+    <div class="col-12">
+        <div id="slide3" class="col-12 slidex ">
+            <h2>Inspect Network</h2>
+            
+            <div class="row">
+                <div class="col-12"><hr/></div>
+            </div>
+    
+            The network tab helps to debug links that are slow or broken. In the example below we see a 404 on <code>images/web-inspect-elements</code>. 
+            The reason is that we missed the '.png' in the filename. 
+
+            <div><img src="images/web-inspect-elements-error.png" class="img-fluid"/></div>
+    
+        </div>
+    </div>
+    
+
+<div class="row">
+<div class="col-12">
+<div id="slide3" class="col-12 slidex ">
+    <h2>Inspect Network</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    The network tab helps to debug links that are slow or broken. In the example below we see a 404 on <code>images/web-inspect-elements</code>. 
+    The reason is that we missed the '.png' in the filename. 
+
+    <div><img src="images/web-inspect-elements-error.png" class="img-fluid"/></div>
+
+</div>
+</div>
+    
+<div class="row">
+<div class="col-12">
+<div id="slide4" class="col-12 slidex ">
+    <h2>Inspect Console</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    The Console tab helps to debug css importing and javascript issues. 
+
+    <div><img src="images/web-console.png" class="img-fluid"/></div>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide5" class="col-12 slidex ">
+    <h2>Log Files</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    Depending on the way the page content is rendered and hosted, you will need to look at log files on the server. 
+    In most cases the most common log file will be the nginx access and error logs. Below is an example of an access_log.  
+
+    <div><img src="images/web-nginx-log.png" class="img-fluid"/></div>
+
+    We will cover analysizing log files in the Linux Server section of the course.
+
+
+</div>
+</div>
+
+   </div class="row">
+      <div class="col-12 footer">
+         <img src="assets/mocdss_logo.png"/>
+      </div>
+   </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+     
+   </body>
+</html>
+
