@@ -1,0 +1,208 @@
+<html>
+   <head>
+      <title>YanniTech Training</title>
+      <link rel="stylesheet" type="text/css" href="style.css"> 
+      <script src = "jquery.js" type="text/javascript"></script>
+      <script src = "ux.js" type="text/javascript"></script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   </head>
+      <body>
+         <div class="container">
+            <nav class="col-12 navbar navbar-expand-lg">
+               <div class="container-fluid">
+                 <a class="navbar-brand" href="/">MCDSS Training</a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="/">Home</a>
+                     </li>
+
+                     <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Day 1
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>Web Application Infrastructure</li>
+                        <li>Web Application Code Execution</li>
+                        <li>Web Frameworks</li>
+                        <li><a class="dropdown-item" href="web_troubleshoot.html">Troubleshooting Techniques</a></li>
+                        <li><a class="dropdown-item" href="WebDevSupport.pptx">Session Slides</a></li>
+                      </ul>
+                    </li>
+
+
+
+
+                     <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         Day 6
+                       </a>
+                       <ul class="dropdown-menu">
+                         <li><a class="dropdown-item" href="linux_intro.html">Introduction to Linux</a></li>
+                         <li><a class="dropdown-item" href="linux_files.html">Users and Filesystem</a></li>
+                         <li><a class="dropdown-item" href="linux_file_edit.html">Basic File and Text Manipulation</a></li>
+                       </ul>
+                     </li>
+                     
+                   </ul>
+                 </div>
+               </div>
+             </nav>
+
+
+             
+
+
+      <div class="row">
+    <h1 class="slideh1">Bootstrap</h1>
+    
+    <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">What is Bootstrap?</button>
+    <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info">Linking</button>
+    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info">Examples</button>
+    <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info">References</button>
+</div>
+
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide1" class="col-12 slidex ">
+<h2>What is Bootstrap?</h2>
+
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+<p>
+Bootstrap is a web page / application layout framework that utilizes CSS and JavaScript.
+It enables you the build reactive web app layouts which will scale to mobile page views.
+</p>
+
+<h3>Example of large screen view</h3>
+<div><img src="images/ux-bootstrap-ex1.png" class="img-fluid"/></div>
+
+
+<h3>Example of mobile view</h3>
+<div><img src="images/ux-bootstrap-ex2.png" class="img-fluid"/></div>
+
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide2" class="col-12 slidex">
+<h2>Linking</h2>
+
+<div class="row">
+    <div class="col-12"><hr/></div>
+</div>
+
+To get started with bootstrap you can go to their <a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/#quick-start">Quick Start</a> page.
+You need 5 lines in you html page.
+
+<div><img src="images/ux-bootstrap-start.png" class="img-fluid"/></div>
+
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-12">
+<div id="slide3" class="col-12 slidex ">
+    <h2>Selectors</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+
+    <p>
+    CSS styles have the following syntax.
+    </p>
+    <pre class="code">
+        &lt;selector&gt; {
+            &lt;property&gt; : &lt;value&gt; ;
+            &lt;property&gt; : &lt;value&gt; ;
+            ..
+        }
+    </pre>
+
+    <p>
+        Selectors tell the styling engine where to apply the styles. There are 4 selector types. 
+        <ul>
+            <li><b>Element</b></li>
+            <ul>
+                <li>Example: <code>h4 { color: blue; }</code></li>
+                <li>Matches HTML tags like h1, div, p etc</li>
+            </ul>
+            <li><b>Classes</b></li>
+            <ul>
+                <li>Example: <code>.warning { color: red; }</code></li>
+                <li>Matches tags like &lt;div class="warning" ...</li>
+            </ul>
+            <li><b>IDs</b></li> 
+              <ul>
+
+                <li>Example: <code>#item1 { color: green; }</code></li>
+                <li>Matches only one tag like &lt;button id="item1" ...</li>
+                </ul>    
+            <li><b>All</b></li> 
+                <ul>
+  
+                  <li>Example: <code>* { color: yellow; }</code></li>
+                  <li>Matches everything. This should not be used unless there is a very good reason. It tends to break more things than it fixes.</li>
+            </ul>    
+                  
+        </ul>
+
+    </p>
+    
+</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+    <div id="slide4" class="col-12 slidex ">
+        <h2>References</h2>
+        
+        <div class="row">
+            <div class="col-12"><hr/></div>
+        </div>
+    
+        <p>
+        Here are some style and CSS references:
+        </p>
+        <ul>
+            <li><a href="https://www.w3schools.com/html/html_styles.asp">Styles Tutorial</a></li>
+            <li><a href="https://www.w3schools.com/html/html_css.asp">CSS Tutorial</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Dev Network: CSS Reference</a></li>
+            <li><a href="https://htmlcheatsheet.com/css/">CSS Cheat Sheat and many other Web References</a></li>
+
+
+        </ul>
+
+    </div>
+    </div>
+    </div>
+
+
+   </div class="row">
+      <div class="col-12 footer">
+         <img src="assets/mocdss_logo.png"/>
+      </div>
+   </div>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+     
+   </body>
+</html>
+
