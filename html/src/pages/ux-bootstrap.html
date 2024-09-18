@@ -3,10 +3,11 @@
     
     <button onclick="showslide('#slide1')" class="slidebtn col-2 btn btn-info">What is Bootstrap?</button>
     <button onclick="showslide('#slide2')" class="slidebtn col-2 btn btn-info">Linking</button>
-    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info">The Box model</button>
+    <button onclick="showslide('#slide3')" class="slidebtn col-2 btn btn-info">The Box Model</button>
+    <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info">12 Column Grid Overview</button>
+    <button onclick="showslide('#slide5')" class="slidebtn col-2 btn btn-info">12 Column Grid Examples</button>
+    <button onclick="showslide('#slide6')" class="slidebtn col-2 btn btn-info">Bootstrap Goodies</button>
     
-    <button onclick="showslide('#slide4')" class="slidebtn col-2 btn btn-info">Examples</button>
-    <button onclick="showslide('#slide5')" class="slidebtn col-2 btn btn-info">References</button>
 </div>
 
 <div class="row">
@@ -57,80 +58,186 @@ You need 5 lines in you html page.
 </div>
 
 <div class="row">
+    <div id="slide3" class="col-12 slidex">
+    <h2>The Box Model</h2>
+    
+    <div class="row">
+        <div class="col-12"><hr/></div>
+    </div>
+    
+    <p>
+    Before layout frameworks, you had to use margins, borders and padding on a div to layout your web pages. 
+    The sizes of these style attributes can be specified in a number of different units, like percentage, pixels, em etc. 
+    There was quite a bit of planning on paper involved and to make things worse, not all broswers handled the borders and padding the same way. 
+    </p>
+
+    <p>You can use the Browser Inspect mode to look at an elements' box parameters</p>
+    <div><img src="images/ux-box-model.png" class="img-fluid"/></div>
+    
+    </div>
+    </div>
+
+
+<div class="row">
 <div class="col-12">
-<div id="slide3" class="col-12 slidex ">
-    <h2>Selectors</h2>
+<div id="slide4" class="col-12 slidex ">
+    <h2>12 Column Grid Overview</h2>
     
     <div class="row">
         <div class="col-12"><hr/></div>
     </div>
 
     <p>
-    CSS styles have the following syntax.
+    Bootstrap uses the concept of the screen being devided into 12 columns. The columns are layed out in a 'container' with 'row's and the 'col's.
     </p>
+
+    <h4>Code:</h4>
     <pre class="code">
-        &lt;selector&gt; {
-            &lt;property&gt; : &lt;value&gt; ;
-            &lt;property&gt; : &lt;value&gt; ;
-            ..
-        }
-    </pre>
-
-    <p>
-        Selectors tell the styling engine where to apply the styles. There are 4 selector types. 
-        <ul>
-            <li><b>Element</b></li>
-            <ul>
-                <li>Example: <code>h4 { color: blue; }</code></li>
-                <li>Matches HTML tags like h1, div, p etc</li>
-            </ul>
-            <li><b>Classes</b></li>
-            <ul>
-                <li>Example: <code>.warning { color: red; }</code></li>
-                <li>Matches tags like &lt;div class="warning" ...</li>
-            </ul>
-            <li><b>IDs</b></li> 
-              <ul>
-
-                <li>Example: <code>#item1 { color: green; }</code></li>
-                <li>Matches only one tag like &lt;button id="item1" ...</li>
-                </ul>    
-            <li><b>All</b></li> 
-                <ul>
-  
-                  <li>Example: <code>* { color: yellow; }</code></li>
-                  <li>Matches everything. This should not be used unless there is a very good reason. It tends to break more things than it fixes.</li>
-            </ul>    
-                  
-        </ul>
-
-    </p>
+&lt;head&gt;
+    &lt;style&gt;
+    .box {
+        background-color: rgb(22, 141, 68);
+        color: lightgray;
+        margin: 5px;
+    }
+    &lt;/style&gt;
+  ...
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col&quot;&gt;
+            &lt;h1&gt;Welcome to The Box Model&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
     
+        &lt;div class=&quot;col box&quot;&gt;
+            &lt;h2&gt;Hello World&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col box&quot;&gt;
+            &lt;h2&gt;Have a good day !!!&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+...
+&lt;/body&gt;
+    </pre>
+    
+    <h4>Result</h4>
+    <div><img src="images/ux-bootstrap-ex3.png" class="img-fluid"/></div>
+    
+    <ol>
+        <li><strong>Column Widths:</strong><br>
+            You can specify how many columns an element should span using classes like<br>
+            <ul>
+                 <li><code>col-</code></li>
+                 <li><code>col-sm-</code></li>
+                 <li><code>col-md-</code></li>
+                 <li><code>col-lg-</code></li>
+                 <li><code>col-xl-</code></li>
+                </ul>
+                 For example, <code>col-md-6</code> means the element will take up 6 out of 12 columns on medium-sized screens and above.
+                 </li>
+
+        <li><strong>Responsive Behavior:</strong> The grid system adapts based on screen size:
+            <ul>
+                <li><code>col-</code>: Applies for extra-small screens (less than 576px).</li>
+                <li><code>col-sm-</code>: Applies for small screens (≥576px).</li>
+                <li><code>col-md-</code>: Applies for medium screens (≥768px).</li>
+                <li><code>col-lg-</code>: Applies for large screens (≥992px).</li>
+                <li><code>col-xl-</code>: Applies for extra-large screens (≥1200px).</li>
+            </ul>
+        </li>
+
+        <li><strong>Auto Layout:</strong> You can use <code>col</code> without specifying a number, allowing the column to automatically adjust its width based on the number of sibling columns.</li>
+    </ol>
+
+
+
+
+
 </div>
 </div>
 </div>
 
 <div class="row">
-    <div class="col-12">
-    <div id="slide4" class="col-12 slidex ">
-        <h2>References</h2>
+    <div id="slide5" class="col-12 slidex ">
+        <h2>12 Column Grid Examples</h2>
+        
+        <div class="row">
+            <div class="col-12"><hr/></div>
+        </div>
+    
+        <h4>Code:</h4>
+        <pre class="code">
+&#60;div class="container"&#62;
+    &#60;div class="row"&#62;
+        &#60;div class="col"&#62;
+            &#60;h1&#62;Welcome to Bootstrap Column Layout&#60;/h1&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+
+    &#60;div class="row"&#62;
+        &#60;div class="col-12 box"&#62;
+            &#60;h2&#62;class="col-12"&#60;/h2&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+
+    &#60;div class="row"&#62;
+        &#60;div class="col-2 box"&#62;
+            &#60;h2&#62;class="col-2"&#60;/h2&#62;
+        &#60;/div&#62;
+        &#60;div class="col-4  box"&#62;
+            &#60;h2&#62;class="col-4"&#60;/h2&#62;
+        &#60;/div&#62;
+        &#60;div class="col-2 box"&#62;
+            &#60;h2&#62;class="col-2"&#60;/h2&#62;
+        &#60;/div&#62;    
+    &#60;/div&#62;
+
+    &#60;div class="row"&#62;
+        &#60;div class="col-8 box"&#62;
+            &#60;h2&#62;class="col-8"&#60;/h2&#62;
+        &#60;/div&#62;
+        &#60;div class="col-6 box"&#62;
+            &#60;h2&#62;class="col-6" Wraps&#60;/h2&#62;
+        &#60;/div&#62;
+    &#60;/div&#62;
+&#60;/div&#62;
+</pre>
+    
+<h4>Result</h4>
+<div><img src="images/ux-bootstrap-ex4.png" class="img-fluid"/></div>
+</div>
+</div>
+
+<div class="row">
+    <div id="slide6" class="col-12 slidex ">
+        <h2>Bootstrap Goodies</h2>
         
         <div class="row">
             <div class="col-12"><hr/></div>
         </div>
     
         <p>
-        Here are some style and CSS references:
+        Bootstrap does not only do layout. It comes with a lot of features you will recognize on modern web applications.    
         </p>
-        <ul>
-            <li><a href="https://www.w3schools.com/html/html_styles.asp">Styles Tutorial</a></li>
-            <li><a href="https://www.w3schools.com/html/html_css.asp">CSS Tutorial</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Dev Network: CSS Reference</a></li>
-            <li><a href="https://htmlcheatsheet.com/css/">CSS Cheat Sheat and many other Web References</a></li>
+        
+        <h4>Navbar</h4>
+        <div><img src="images/ux-bootstrap-navbar.png" class="img-fluid"/></div>
+        <a href="https://getbootstrap.com/docs/5.3/components/navbar/">Documenation</a>
+        
+        <h4>Accordian</h4>
+        <div><img src="images/ux-bootstrap-accordian.png" class="img-fluid"/></div>
+        <a href="https://getbootstrap.com/docs/5.3/components/accordian/">Documenation</a>
+        
+        <h4>Loading Placeholders</h4>
+        <div><img src="images/ux-bootstrap-loading.png" class="img-fluid"/></div>
+        <a href="https://getbootstrap.com/docs/5.3/components/placeholders/">Documenation</a>
+        
+        <p>And many many more</p>
 
 
-        </ul>
-
-    </div>
     </div>
     </div>

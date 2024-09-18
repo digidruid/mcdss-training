@@ -66,3 +66,17 @@ img {
     margin-top: 1.5em;
     margin-bottom: 1em;
 }
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ol {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+strong {
+    color: #34495e;
+}
