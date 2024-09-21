@@ -12,4 +12,3 @@ function showslide(id) {
     $(".slidex").hide()
     $(id).show()
 }
-
